@@ -10,7 +10,7 @@ TBD - SUMMARY
 
 **Server-Side Rendering:** JSX
 
-**Node Modules**: Method-Override, DotEnv, express-react-views
+**Node Modules**: method-override, dotenv, express-react-views
 
 ## Routes
 
