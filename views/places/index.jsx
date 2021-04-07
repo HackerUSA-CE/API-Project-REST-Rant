@@ -1,5 +1,5 @@
 const React = require('react')
-const Default = require('../layouts/Default')
+const Default = require('../layouts/default')
 console.log(Default)
 function Index ({places = []}) {
     return (
