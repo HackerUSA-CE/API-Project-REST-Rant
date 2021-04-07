@@ -1,0 +1,21 @@
+# Proceedure
+- make git repo
+- make basic express server w. `index.js` file
+- `npm i method-override express-react-views mongoose`
+- `mkdir controllers`
+- `mkdir models`
+- `mkdir public`
+- `mkdir views`
+- `mkdir views/layouts`
+- `mkdir views`
+- `mkdir views/layouts`
+- `touch controllers/places.js`
+- `touch models/place.js`
+- `touch public/main.css`
+- `touch views/layouts/default.jsx`
+- `mkdir views/places`
+- `touch views/places/index.jsx`
+- `touch views/places/edit.jsx`
+- `touch views/places/new.jsx`
+- `touch views/places/show.jsx`
+- `touch views/404.jsx`
