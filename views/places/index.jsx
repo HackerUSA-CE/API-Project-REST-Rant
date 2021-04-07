@@ -1,6 +1,6 @@
 const React = require('react')
 const Default = require('../layouts/default')
-console.log(Default)
+
 function Index ({places = []}) {
     return (
       <Default>
@@ -11,7 +11,10 @@ function Index ({places = []}) {
           {
             places.map((place, index) => {
               return (
+                <>
+                <img src={place.pic} />
                 <li key={place._id}>{place.name}</li>
+                </>
               )
             })
           }

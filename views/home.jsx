@@ -1,10 +1,13 @@
 const React = require('react')
-const Default = require('./layouts/default')
+const Default = require('./layouts/Default')
 
-function Home () {
+function Home() {
     return (
       <Default>
-        <h1>Home</h1>
+      <Default>
+        <main>
+         <h2>HOME</h2>
+        </main>
       </Default>
     )
 }
