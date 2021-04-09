@@ -6,4 +6,6 @@ app.get('/', (req, res) => {
     res.send('Hello world home page')
 })
 
+app.use('/places', require('./controllers/places'))
+
 app.listen(process.env.PORT)

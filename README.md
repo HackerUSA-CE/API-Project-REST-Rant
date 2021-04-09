@@ -25,7 +25,7 @@ TBD - SUMMARY
 | PUT | `/places/:id` | Make changes to existing place |
 | DELETE | `/places/:id` | Delete a place |
 | POST | `/places/:id/rant` | Add rant to a place |
-| DELETE | `/places/:id/rant/:id` | Delete a rant |
+| DELETE | `/places/:id/rant/:rantId` | Delete a rant |
 
 ## Database
 
