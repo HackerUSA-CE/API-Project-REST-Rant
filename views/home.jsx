@@ -4,7 +4,6 @@ const Default = require('./layouts/Default')
 function Home() {
     return (
       <Default>
-      <Default>
         <main>
          <h2>HOME</h2>
         </main>
