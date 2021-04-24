@@ -30,7 +30,6 @@ TBD - SUMMARY
 ## Database
 
 **places** 
-(Full CRUD)
 
 | Field | Type |
 | ---------- | ------------ |
@@ -42,7 +41,6 @@ TBD - SUMMARY
 | pic | String |
 
 **rants**
-(Add, View, and Delete on Place Page)
 
 | Field | Type |
 | ---------- | ------------ |
@@ -52,6 +50,16 @@ TBD - SUMMARY
 | rating | Number |
 | comment | String |
 | reviewer | String |
+
+## Planning
+
+### User Stories
+
+TBD
+
+### Wireframes
+
+TBD
 
 ## Notes
 
