@@ -44,6 +44,10 @@ nav a:hover {
     text-decoration: none;
 }
 
+form {
+    display: inline;
+}
+
 .inactive {
     color: gray;
 }

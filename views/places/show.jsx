@@ -27,6 +27,15 @@ function show (data) {
                 <h3>
                   Serving {data.place.cuisines}
                 </h3>
+                <br />
+                <a href={`/places/${data.i}/edit`} className="btn btn-warning">
+                  Edit
+                </a>{` `}
+                <form method="POST" action={`/places/${data.i}?_method=DELETE`}>
+                  <button type="submit" className="btn btn-danger">
+                    Delete
+                  </button>
+                </form>
               </div>
             </div>
             <hr />
