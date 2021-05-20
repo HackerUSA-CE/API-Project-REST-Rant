@@ -25,24 +25,24 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    let i = Number(req.params.id)
-    if (isNaN(i)) {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
         res.render('error404')
     }
-    else if (!places[i]) {
+    else if (!places[id]) {
         res.render('error404')
     }
     else {
-        res.render('places/show', { place: places[i], i })
+        res.render('places/show', { place: places[id], id })
     }
 })
 
 router.put('/:id', (req, res) => {
-    let i = Number(req.params.id)
-    if (isNaN(i)) {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
         res.render('error404')
     }
-    else if (!places[i]) {
+    else if (!places[id]) {
         res.render('error404')
     }
     else {
@@ -58,36 +58,36 @@ router.put('/:id', (req, res) => {
             req.body.state = 'USA'
         }
 
-        // Save the new data into places[i]
-        places[i] = req.body
-        res.redirect(`/places/${i}`)
+        // Save the new data into places[id]
+        places[id] = req.body
+        res.redirect(`/places/${id}`)
     }
 })
 
 router.delete('/:id', (req, res) => {
-    let i = Number(req.params.id)
-    if (isNaN(i)) {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
         res.render('error404')
     }
-    else if (!places[i]) {
+    else if (!places[id]) {
         res.render('error404')
     }
     else { 
-        places.splice(i, 1)
+        places.splice(id, 1)
         res.redirect('/places')
     }
 })
 
 router.get('/:id/edit', (req, res) => {
-    let i = Number(req.params.id)
-    if (isNaN(i)) {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
         res.render('error404')
     }
-    else if (!places[i]) {
+    else if (!places[id]) {
         res.render('error404')
     }
     else { 
-        res.render('places/edit', { place: places[i], i})
+        res.render('places/edit', { place: places[id], id})
     }
 })
 
