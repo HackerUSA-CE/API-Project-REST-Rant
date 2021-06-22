@@ -49,12 +49,19 @@ router.get('/:id', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-    res.render('PUT /places/:id stub')
+    db.Place.findByIdAndUpdate(req.params.id, req.body)
+    .then(() => {
+        res.redirect(`/places/${req.params.id}`)
+    })
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
 })
 
 router.delete('/:id', (req, res) => {
     db.Place.findByIdAndDelete(req.params.id)
-    .then(place => {
+    .then(() => {
         res.redirect('/places')
     })
     .catch(err => {
@@ -64,11 +71,18 @@ router.delete('/:id', (req, res) => {
 })
 
 router.get('/:id/edit', (req, res) => {
-    res.send('GET edit form stub')
+    db.Place.findById(req.params.id)
+    .then(place => {
+        res.render('places/edit', { place })
+    })
+    .catch(err => {
+        res.render('error404')
+    })
 })
 
 router.post('/:id/comment', (req, res) => {
-    console.log(req.body)
+    console.log('post comment', req.body)
+    req.body.rant = req.body.rant ? true : false
     db.Place.findById(req.params.id)
     .then(place => {
         db.Comment.create(req.body)
@@ -77,6 +91,9 @@ router.post('/:id/comment', (req, res) => {
             place.save()
             .then(() => {
                 res.redirect(`/places/${req.params.id}`)
+            })
+            .catch(err => {
+                res.render('error404')
             })
         })
         .catch(err => {
@@ -89,7 +106,15 @@ router.post('/:id/comment', (req, res) => {
 })
 
 router.delete('/:id/comment/:commentId', (req, res) => {
-    res.send('GET /places/:id/rant/:rantId stub')
+    db.Comment.findByIdAndDelete(req.params.commentId)
+    .then(() => {
+        console.log('Success')
+        res.redirect(`/places/${req.params.id}`)
+    })
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
 })
 
 
