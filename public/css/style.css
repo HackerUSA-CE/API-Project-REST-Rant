@@ -55,3 +55,7 @@ form {
 .border {
     border: 1px solid gray;
 }
+
+img {
+    height: 2em;
+}
